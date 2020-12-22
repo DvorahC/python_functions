@@ -1,0 +1,63 @@
+Exercise #1 — Acrobot
+
+-join()
+-str.split()
+Whenever you want to break a string into separate pieces, you want to use the "str.split" method.
+ It's a string method, so it both runs on a string and doesn't change the string (since strings are immutable).
+It always returns a list of strings, with each element in the list coming before/after the delimiter we set.
+We will *always* get a list of strings back from "str.split" --
+although it's also possible to get an empty list back, if the original string was empty.
+-Passing optional parameters into a function in python
+-using list comprehension
+-upper() vs title() :
+lower() converts the input string to lower case ex: Whaou THE ---> whaou the
+upper() converts the input string to upper case ex: Whaou THE ---> WHAOU THE
+title() converts the input string to proper case or title case. that is, all words begin with uppercase and the rest are lowercase.
+ex : Whaou THE --> Wahou The
+
+- building a string:
+it is bad to use += between strings in python
+because you can't really change strings in Python, which means that you're constantly creating new strings,
+ each one character longer than the previous one.
+It is very inefficient in terms of memory usage.
+So if you have to build a string up over time, it's actually better to create a list, appending each character to the list,
+and then to use "str.join" to create a string based on the (final version of the) list
+ TRICK : Use an empty string to create the glue for join() -->
+ -> invoke str.join here, using an empty string as the "glue" between the elements of "output".
+
+
+Exercise #2 — Left-right chars
+In Python we cant have 2 functions with the same name even if they return or do different things.
+-The "str.rstrip" method is great for removing newline characters from the ends of lines we want to work with,
+ while not messing with the left-hand side.
+-Slice in Python :  s[start_index:end_index+1]
+- nested list comprehensions :
+The idea is that the "for" loops execute from top to bottom,
+and the output line (on top) will produce output once for each inner (lower) "for" loop.
+The trick is to write the forLoop from top to bottom
+
+
+Exercice #3 - Family ages
+- parameter : "**kwargs"
+- whereas "*args" takes any number of arguments and creates a tuple, "**kwargs" only pays attention to "keyword arguments" --
+i.e., anything looking like "a=1" or "b=2" in the argument list.
+Without that name, equals sign, and value, Python won't assign the names and values to "kwargs".
+And the "kwargs" parameter (i.e., local variable) will always be a dictionary.
+
+Exercise #5 — Files by size
+This week, we'll explore the idea of returning multiple items from a function.
+In case you weren't sure whether you should be using "*args" or "**kwargs",
+the basic rule of thumb is that "*args" takes any number of arguments,
+while "**kwargs" takes any number of name-value pairs.
+ If you are just getting (for example) a bunch of filenames, then it's going to be "*args".
+And indeed, the rule of thumb you should always employ is: If you are transforming one iterable into a list
+ ____>then you should use a list comprehension.
+ Notice how much shorter the code is. But it's not just shorter for you -- it's also more efficient for Python to execute.
+ And it describes the output we want, rather than telling Python how to build it.
+ In that sense, it's what we would call "declarative programming," rather than "imperative programming."
+
+ Exercice #7 -- Scorecard
+ One of the ideas that's hard for many Python newcomers to understand
+ is the idea that functions are objects -- just like integers, strings, lists, and dictionaries.
+ As such, functions can be passed as arguments to other functions, stored in lists and dictionaries, and the like.
+
