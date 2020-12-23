@@ -65,7 +65,7 @@ def get_location_weather(location):
     if location is None:
         raise AddressNotFound(f'Cannot find location of "{location}"')
     latitude, longitude = find_city(location)
-    datas = {'lat': latitude, 'lon': longitude, 'appid': '01cc51bb5280597ff9a8ddbd0311ef59'}
+    datas = {'lat': latitude, 'lon': longitude, 'appid': 'XXXX'}
     response = requests.get(url='http://api.openweathermap.org/data/2.5/weather', params=datas)
     data = response.json()
     dict = {'temp': data['main']['temp'],
